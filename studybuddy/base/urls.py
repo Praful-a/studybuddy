@@ -6,10 +6,14 @@ from base.views import (
     createRoom,
     updateRoom,
     deleteRoom,
+    loginPage,
+    logoutUser,
 )
 
 
 urlpatterns = [
+    path("login/", loginPage, name='login'),
+    path("logout/", logoutUser, name='logout'),
     path('', home, name='home'),
     path('room/<str:pk>/', room, name="room"),
     path('create-room/', createRoom, name='create-room'),
