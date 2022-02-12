@@ -8,11 +8,13 @@ from base.views import (
     deleteRoom,
     loginPage,
     logoutUser,
+    registerUser,
 )
 
 
 urlpatterns = [
     path("login/", loginPage, name='login'),
+    path("register/", registerUser, name='register'),
     path("logout/", logoutUser, name='logout'),
     path('', home, name='home'),
     path('room/<str:pk>/', room, name="room"),
