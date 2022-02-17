@@ -12,6 +12,8 @@ from base.views import (
     deleteMessage,
     userProfile,
     updateUser,
+    topicsPage,
+    activityPage,
 )
 
 
@@ -27,4 +29,6 @@ urlpatterns = [
     path('delete-room/<str:pk>/', deleteRoom, name='delete-room'),
     path('delete-message/<str:pk>/', deleteMessage, name='delete-message'),
     path('update-user/', updateUser, name='update-user'),
+    path('topics/', topicsPage, name='topics'),
+    path('activity/', activityPage, name='activity'),
 ]
