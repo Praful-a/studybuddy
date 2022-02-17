@@ -10,7 +10,8 @@ from base.views import (
     logoutUser,
     registerUser,
     deleteMessage,
-    userProfile
+    userProfile,
+    updateUser,
 )
 
 
@@ -25,4 +26,5 @@ urlpatterns = [
     path('update-room/<str:pk>/', updateRoom, name='update-room'),
     path('delete-room/<str:pk>/', deleteRoom, name='delete-room'),
     path('delete-message/<str:pk>/', deleteMessage, name='delete-message'),
+    path('update-user/', updateUser, name='update-user'),
 ]
